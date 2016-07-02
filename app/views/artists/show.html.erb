@@ -1,0 +1,171 @@
+<%= render 'views/header' %>
+
+<!-- HERO -->
+
+<div class="jumbotron-artist">
+  <div class="hero-overlay">
+    <div class="container hero-callout">
+      <span class="jumbo-head"><%= @artist.artist_name %></span>
+      <div class="artist-line"></div>
+      <span class="jumbo-head-sub"><%= @artist.artist_band %></span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Breadcrumb -->
+<div class="container bcrumb">
+  <div class="row">
+
+    <ol class="breadcrumb p-text">
+      <li><%= link_to 'Artists', artists_path %></li>
+      <li class="active"><%= @artist.artist_name %></li>
+    </ol>
+
+  </div>
+</div>
+
+
+<!-- MAIN CARD BODY -->
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="well">
+
+        <h2>Biography</h2>
+        <hr>
+        <p class="p-bio"><%= @artist.artist_bio %></p>
+
+        <hr>
+
+        <div class="footer-copy">Source: <%= @artist.artist_bio_src %></div>
+
+      </div>
+
+
+      <!-- <div class="well">
+
+        <h2>Photos</h2>
+        <hr>
+
+      </div> -->
+
+    </div>
+
+
+
+<!-- RIGHT CARD COL -->
+
+    <div class="col-md-4">
+
+      <div class="well artist-kit-well">
+
+        <a href="<%= @artist.kit_img %>"><img src="<%= @artist.kit_img %>" width="100%"></a>
+
+      </div>
+
+
+      <div class="well">
+
+        <h2>Kit Specifications</h2>
+        <hr>
+
+        <h2>Shells</h2>
+        <p class="p-text"><%= @artist.kit_specs %></p>
+        <p class="p-text"><%= @artist.kit_material %></p>
+
+        <hr>
+
+        <h2>Finish</h2>
+        <p class="p-text"><%= @artist.kit_finish %></p>
+
+      </div>
+
+
+      <div class="well">
+        <h2>Social Love</h2>
+        <hr>
+        <div class="text-center">
+          <%=link_to image_tag('btn-inst.jpg', class:"artist-social"), @artist.social_inst %>
+          <%=link_to image_tag('btn-twt.jpg', class:"artist-social"), @artist.social_twit %>
+          <%=link_to image_tag('btn-fb.jpg', class:"artist-social"), @artist.social_fb %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<%= render 'views/footer' %>
+
+<!-- <p>
+  <%= @artist.artist_name %>
+</p>
+
+<p>
+  <strong>Artist band:</strong>
+  <%= @artist.artist_band %>
+</p>
+
+<p>
+  <strong>Artist img:</strong>
+  <%= @artist.artist_img %>
+</p>
+
+<p>
+  <strong>Artist hero img:</strong>
+  <%= @artist.artist_hero_img %>
+</p>
+
+<p>
+  <strong>Artist bio:</strong>
+  <%= @artist.artist_bio %>
+</p>
+
+<p>
+  <strong>Artist bio src:</strong>
+  <%= @artist.artist_bio_src %>
+</p>
+
+<p>
+  <strong>Kit specs:</strong>
+  <%= @artist.kit_specs %>
+</p>
+
+<p>
+  <strong>Kit material:</strong>
+  <%= @artist.kit_material %>
+</p>
+
+<p>
+  <strong>Kit finish:</strong>
+  <%= @artist.kit_finish %>
+</p>
+
+<p>
+  <strong>Kit img:</strong>
+  <%= @artist.kit_img %>
+</p>
+
+<p>
+  <strong>Social inst:</strong>
+  <%= @artist.social_inst %>
+</p>
+
+<p>
+  <strong>Social fb:</strong>
+  <%= @artist.social_fb %>
+</p>
+
+<p>
+  <strong>Social twit:</strong>
+  <%= @artist.social_twit %>
+</p>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %> -->

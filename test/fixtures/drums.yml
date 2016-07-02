@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  drumTitle: MyString
+  drumSize: MyString
+  drumPhoto: MyString
+  drumPrice: MyString
+  drumCustomer: MyString
+  drumCustomerSocial: MyString
+  drumDetails: MyText
+
+two:
+  drumTitle: MyString
+  drumSize: MyString
+  drumPhoto: MyString
+  drumPrice: MyString
+  drumCustomer: MyString
+  drumCustomerSocial: MyString
+  drumDetails: MyText

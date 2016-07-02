@@ -1,0 +1,99 @@
+<%= render 'views/header' %>
+
+<!-- HERO -->
+
+<div class="jumbotron-drums">
+  <div class="hero-overlay">
+    <div class="container hero-callout">
+      <span class="jumbo-head">quality and craftsmanship</span><br><br><br>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">learn more</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CARD BODY -->
+
+
+<div class="container">
+
+  <div class="section-title">
+    shop our recent builds or <a href="#">build your own</a>
+    <hr>
+  </div>
+
+  <!-- RECENT BUILDS 6 -->
+
+  <div class="row">
+    <% @drums = Drum.order("created_at desc").limit(6) %>
+    <% @drums.each do |drum| %>
+      <div class="col-md-4">
+        <div class="img-600">
+          <a href="<%= drum_path(drum) %>" class="meta-hover"><img class="kit" src="<%= drum.drumPhoto %>">
+
+            <div class="contenthover">
+              <div class="hover-text-container">
+                <div class="hover-text-head"><%= drum.drumCustomer %></div>
+                <div class="hover-text-sub"><%= drum.drumSize %></div>
+                <div class="hover-text-sub-2"><%= drum.drumDetails %></div>
+              </div>
+            </div>
+
+          </a>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+
+    <div class="section-title">
+      get inspired by our past
+      <div class="btn-group">
+        <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">kit builds <span class="caret"></span></button>
+
+        <ul class="dropdown-menu">
+          <li><a>snare builds</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <hr>
+
+  <!-- PAST BUILDS -->
+
+  <div class="row">
+    <% @drums = Drum.order("created_at desc").offset(6) %>
+    <% @drums.each do |drum| %>
+
+    <div class="col-md-3 pull-left">
+      <div class="img-450 text-center">
+        <a href="<%= drum_path(drum) %>" class="meta-hover"><img class="kit-sm" src="<%= drum.drumPhoto %>">
+
+          <div class="contenthover">
+            <div class="hover-text-container">
+              <div class="hover-text-head"><%= drum.drumTitle %></div>
+              <div class="hover-text-sub"><%= drum.drumSize %></div>
+            </div>
+          </div>
+
+        </a>
+      </div>
+
+    </div>
+
+    <% end %>
+
+  </div>
+
+  <div class="row text-center">
+
+    <p><a class="btn-inverse btn-primary btn-sm" href="#" role="button">show more</a></p>
+
+  </div>
+
+</div>
+
+
+<%= render 'views/footer' %>

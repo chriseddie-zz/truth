@@ -1,0 +1,83 @@
+<%= form_for(@artist) do |f| %>
+  <% if @artist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+
+      <ul>
+      <% @artist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <h2>Artist Details</h2>
+    <hr>
+
+    <%= f.text_field :artist_name, class: "form-control", placeholder: "Artist Name" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :artist_band, class: "form-control", placeholder: "Band or Artist Name" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :artist_img, class: "form-control", placeholder: "Artist Photo (640x640)" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :artist_hero_img, class: "form-control", placeholder: "Header Image (1440x300)" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_area :artist_bio, rows: "8", class: "form-control", placeholder: "Biography" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :artist_bio_src, class: "form-control", placeholder: "Source of Biography" %>
+    <br>
+  </div>
+
+  <br>
+  <h2>Kit Details</h2>
+  <hr>
+
+  <div class="field">
+    <%= f.text_field :kit_specs, class: "form-control", placeholder: "Specifications" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :kit_material, class: "form-control", placeholder: "Material" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :kit_finish, class: "form-control", placeholder: "Finish" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :kit_img, class: "form-control", placeholder: "Kit Photo (600x450)" %>
+  </div>
+
+  <br><br>
+  <h2>Social Love</h2>
+  <hr>
+
+  <div class="field">
+    <%= f.text_field :social_inst, class: "form-control", placeholder: "Instagram" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :social_fb, class: "form-control", placeholder: "Facebook" %>
+    <br>
+  </div>
+  <div class="field">
+    <%= f.text_field :social_twit, class: "form-control", placeholder: "Twitter" %>
+    <br>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit class: "btn-inverse btn-primary btn-sm" %>
+  </div>
+  <br>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Drumtitle:</strong>
+  <%= @drum.drumTitle %>
+</p>
+
+<p>
+  <strong>Drumsize:</strong>
+  <%= @drum.drumSize %>
+</p>
+
+<p>
+  <strong>Drumphoto:</strong>
+  <%= @drum.drumPhoto %>
+</p>
+
+<p>
+  <strong>Drumprice:</strong>
+  <%= @drum.drumPrice %>
+</p>
+
+<p>
+  <strong>Drumcustomer:</strong>
+  <%= @drum.drumCustomer %>
+</p>
+
+<p>
+  <strong>Drumcustomersocial:</strong>
+  <%= @drum.drumCustomerSocial %>
+</p>
+
+<p>
+  <strong>Drumdetails:</strong>
+  <%= @drum.drumDetails %>
+</p>
+
+<%= link_to 'Edit', edit_drum_path(@drum) %> |
+<%= link_to 'Back', drums_path %>
