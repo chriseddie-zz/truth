@@ -1,6 +1,63 @@
-<h1>Editing Drum</h1>
+<%= render 'views/header' %>
 
-<%= render 'form' %>
+<div class="container">
 
-<%= link_to 'Show', @drum %> |
-<%= link_to 'Back', drums_path %>
+  <div class="section-title">
+    edit drum item
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="well">
+
+        <%= render 'form' %><br>
+        <span class="p-label"><%= link_to 'Delete Drum', @drum, method: :delete, data: { confirm: 'Are you sure you want to delete this drum?' } %></span>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="well">
+
+        <h2>Help</h2>
+        <hr>
+
+        <p>Title</p>
+        <p class="p-text">A name to refer to the drum or kit as. Example: <i>White Wash Inlay</i></p>
+
+        <hr>
+
+        <p>Size</p>
+        <p class="p-text">Drum or kit size specifications. Example: <i>24x16, 12x8, 16x14</i></p>
+
+        <hr>
+
+        <p>Buy as built Price</p>
+        <p class="p-text">Estimated price if a customer were to buy this drum or kit as is. <i>Optional</i></p>
+
+        <hr>
+
+        <p>Details</p>
+        <p class="p-text">Hardware, badges, and other custom details to mention.</p>
+
+        <hr>
+
+        <p>Customer Name</p>
+        <p class="p-text">Customer's name. Called out in 'Recent Builds' on the home page. <i>Optional</i></p>
+
+        <hr>
+
+        <p>Customer Social</p>
+        <p class="p-text">Customer's Instagram, Twitter, or Facebook profile link. Use full link with http://</p>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= render 'views/footer' %>
