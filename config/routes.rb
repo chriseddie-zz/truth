@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'views/shop'
 
+  get 'views/admin'
+
   resources :artists
 
 

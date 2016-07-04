@@ -27,15 +27,18 @@
     <br>
   </div>
   <div class="field">
-    <%= f.text_field :drumPhoto, class: "form-control", placeholder: "Photo (600x450)" %>
-    <br>
-  </div>
-  <div class="field">
     <%= f.text_field :drumPrice, class: "form-control", placeholder: "Buy as built price" %>
     <br>
   </div>
   <div class="field">
     <%= f.text_area :drumDetails, rows: "8", class: "form-control", placeholder: "Additional Details" %>
+    <br>
+  </div>
+
+  <h2>Drum Photo</h2>
+  <hr>
+  <div class="field">
+    <%= f.file_field :photo %>
     <br>
   </div>
 

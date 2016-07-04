@@ -1,6 +1,8 @@
 class DrumsController < ApplicationController
   before_action :set_drum, only: [:show, :edit, :update, :destroy]
 
+  http_basic_authenticate_with name: "geoffbarrios", password: "Truth", except: [:index, :show]
+
   # GET /drums
   # GET /drums.json
   def index
@@ -70,6 +72,6 @@ class DrumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def drum_params
-      params.require(:drum).permit(:drumTitle, :drumSize, :drumPhoto, :drumPrice, :drumCustomer, :drumCustomerSocial, :drumDetails, :release_date)
+      params.require(:drum).permit(:drumTitle, :drumSize, :drumPhoto, :drumPrice, :drumCustomer, :drumCustomerSocial, :drumDetails, :release_date, :photo)
     end
 end
