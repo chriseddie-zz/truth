@@ -29,7 +29,9 @@ gem 'seed_dump'
 # file uploader
 gem 'carrierwave'
 # Fog AWS
-gem 'fog-aws'
+gem 'fog'
+# Figaro /config/application.yml
+gem "figaro"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

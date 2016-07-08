@@ -1,7 +1,7 @@
 class DrumsController < ApplicationController
   before_action :set_drum, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "geoffbarrios", password: "Truth", except: [:index, :show]
+  http_basic_authenticate_with :name => ENV['ADMIN_USER'], :password => ENV['ADMIN_PASS'], except: [:index, :show]
 
   # GET /drums
   # GET /drums.json
