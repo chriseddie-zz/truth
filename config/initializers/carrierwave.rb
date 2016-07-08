@@ -6,5 +6,5 @@ CarrierWave.configure do |config|
     :region                 => ENV['us-west-2']
   }
   config.cache_dir = "#{Rails.root}/tmp/uploads"
-  config.fog_directory = ENV['truthdrums-drums']
+  config.fog_directory = ENV['S3_BUCKET']
 end
