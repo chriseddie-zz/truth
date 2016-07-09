@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160704200132) do
+ActiveRecord::Schema.define(version: 20160709041150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,10 +42,11 @@ ActiveRecord::Schema.define(version: 20160704200132) do
     t.string   "drumCustomer"
     t.string   "drumCustomerSocial"
     t.text     "drumDetails"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.datetime "release_date"
     t.string   "photo"
+    t.boolean  "snare",              default: false
   end
 
 end

@@ -72,6 +72,6 @@ class DrumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def drum_params
-      params.require(:drum).permit(:drumTitle, :drumSize, :drumPhoto, :drumPrice, :drumCustomer, :drumCustomerSocial, :drumDetails, :release_date, :photo)
+      params.require(:drum).permit(:drumTitle, :drumSize, :drumPhoto, :drumPrice, :drumCustomer, :drumCustomerSocial, :drumDetails, :release_date, :photo, :snare)
     end
 end
