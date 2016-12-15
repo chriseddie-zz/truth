@@ -1,49 +1,91 @@
-<p id="notice"><%= notice %></p>
+<%= render 'views/header' %>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @drum.photo %>
-</p>
+<div class="container vertical-center">
+  <div class="drumwell">
 
-<p>
-  <strong>Drumtitle:</strong>
-  <%= @drum.drumTitle %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Release Date:</strong>
-  <%= @drum.release_date %>
-</p>
 
-<p>
-  <strong>Drumsize:</strong>
-  <%= @drum.drumSize %>
-</p>
 
-<p>
-  <strong>Drumprice:</strong>
-  <%= @drum.drumPrice %>
-</p>
+    <div class="row">
 
-<p>
-  <strong>Drumcustomer:</strong>
-  <%= @drum.drumCustomer %>
-</p>
+        <div class="col-md-8">
+          <img src="<%= @drum.photo %>">
+        </div>
 
-<p>
-  <strong>Drumcustomersocial:</strong>
-  <%= @drum.drumCustomerSocial %>
-</p>
+        <div class="col-md-4">
+          <br>
+          <h2><%= @drum.drumTitle %></h2>
+          <hr>
 
-<p>
-  <strong>Drumdetails:</strong>
-  <%= @drum.drumDetails %>
-</p>
+          <h2>Sizes</h2>
+          <p class="p-text"><%= @drum.drumSize %></p>
 
-<p>
-  <strong>Snare?:</strong>
-  <%= @drum.snare %>
-</p>
+          <h2>Details</h2>
+          <p class="p-text"><%= @drum.drumDetails %></p>
 
-<%= link_to 'Edit', edit_drum_path(@drum) %> |
-<%= link_to 'Back', drums_path %>
+          <h2>Artist</h2>
+          <p class="p-text"><a href="<%= @drum.drumCustomerSocial %>"><%= @drum.drumCustomer %></a></p>
+
+          <hr>
+
+          <center>
+          <p class="p-label text-center"><%= @drum.drumPrice %></p>
+          <p><a class="btn-inverse btn-primary btn-sm text-center" href="#" role="button">build your own</a></p>
+        </center>
+
+        </div>
+
+    </div>
+
+    <!-- <p>
+      <strong>Photo:</strong>
+      <%= @drum.photo %>
+    </p>
+
+    <p>
+      <strong>Drumtitle:</strong>
+      <%= @drum.drumTitle %>
+    </p>
+
+    <p>
+      <strong>Release Date:</strong>
+      <%= @drum.release_date %>
+    </p>
+
+    <p>
+      <strong>Drumsize:</strong>
+      <%= @drum.drumSize %>
+    </p>
+
+    <p>
+      <strong>Drumprice:</strong>
+      <%= @drum.drumPrice %>
+    </p>
+
+    <p>
+      <strong>Drumcustomer:</strong>
+      <%= @drum.drumCustomer %>
+    </p>
+
+    <p>
+      <strong>Drumcustomersocial:</strong>
+      <%= @drum.drumCustomerSocial %>
+    </p>
+
+    <p>
+      <strong>Drumdetails:</strong>
+      <%= @drum.drumDetails %>
+    </p>
+
+    <p>
+      <strong>Snare?:</strong>
+      <%= @drum.snare %>
+    </p> -->
+  </div>
+</div>
+
+<div class="text-center">
+  <%= link_to 'Edit', edit_drum_path(@drum) %> |
+  <%= link_to 'Back', drums_path %>
+</div>

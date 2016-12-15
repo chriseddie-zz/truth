@@ -5,14 +5,17 @@
 <div class="jumbotron-drums">
   <div class="hero-overlay">
     <div class="container hero-callout">
-      <span class="jumbo-head">quality and craftsmanship</span><br><br><br>
+      <span class="jumbo-head">quality and craftsmanship</span><br><br>
+      <p class="inverse">Truth Custom Drums is one of the top drum manufacturers in the world. With over a decade of experience in the industry, we have become a brand name across the globe. Our quality is proven from our growing list of inspiring artists and customers.</p><br>
       <p><a class="btn btn-primary btn-lg" href="#" role="button">learn more</a></p>
     </div>
   </div>
 </div>
 
-<!-- MAIN CARD BODY -->
 
+
+
+<!-- MAIN CARD BODY -->
 
 <div class="container">
 
@@ -28,7 +31,7 @@
     <% @drums.each do |drum| %>
       <div class="col-md-4">
         <div class="img-600">
-          <a href="<%= drum_path(drum) %>" class="meta-hover"><img class="kit" src="<%= drum.photo %>">
+          <a href="#" data-toggle="modal" data-target="<%= "#drum_modal_#{drum.id}" %>" class="meta-hover"><img class="kit" src="<%= drum.photo %>">
 
             <div class="contenthover">
               <div class="hover-text-container">
@@ -41,6 +44,9 @@
           </a>
         </div>
       </div>
+
+      <%= render partial: 'drum_detail', locals: {:drum => drum} %>
+
     <% end %>
 
   </div>
@@ -69,7 +75,7 @@
 
     <div class="col-md-3 pull-left">
       <div class="img-450 text-center">
-        <a href="<%= drum_path(drum) %>" class="meta-hover"><img class="kit-sm" src="<%= drum.photo %>">
+        <a href="#" data-toggle="modal" data-target="<%= "#drum_modal_#{drum.id}" %>" class="meta-hover"><img class="kit-sm" src="<%= drum.photo %>">
 
           <div class="contenthover">
             <div class="hover-text-container">
@@ -83,14 +89,15 @@
 
     </div>
 
+    <%= render partial: 'drum_detail', locals: {:drum => drum} %>
+
     <% end %>
 
   </div>
 
+
   <div class="row text-center">
-
     <p><a class="btn-inverse btn-primary btn-sm" href="#" role="button">show more</a></p>
-
   </div>
 
 </div>
