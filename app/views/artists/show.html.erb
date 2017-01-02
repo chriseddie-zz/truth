@@ -1,14 +1,9 @@
-<%= render 'views/header' %>
-
-<!-- HERO -->
-
-<div class="jumbotron-artist">
-  <div class="hero-overlay">
-    <div class="container hero-callout">
-      <span class="jumbo-head"><%= @artist.artist_name %></span>
-      <div class="artist-line"></div>
-      <span class="jumbo-head-sub"><%= @artist.artist_band %></span>
-    </div>
+<div class="jumbotron-header">
+  <%= render 'views/header' %>
+  <div class="container hero-callout">
+    <span class="jumbo-head"><%= @artist.artist_name %></span>
+    <div class="artist-line"></div>
+    <span class="jumbo-head-sub"><%= @artist.artist_band %></span>
   </div>
 </div>
 

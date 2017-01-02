@@ -1,68 +1,23 @@
-<%= render 'views/header' %>
-
 <div class="container">
 
-  <div class="section-title">
-    create drum item
+  <div class="text-center">
+      <%=link_to image_tag('admin-logo.png', class:"brand"), :controller => :views, :action => :admin %>
   </div>
-  <hr>
 
   <div class="row">
-    <div class="col-md-8">
 
-      <div class="well">
+    <div class="section-title">
+      add a drum
+    </div>
+    <hr>
 
-        <%= render 'form' %>
-
-      </div>
-
+    <div class="well">
+      <%= render 'form' %>
     </div>
 
-    <div class="col-md-4">
-
-      <div class="well">
-
-        <h2>Help</h2>
-        <hr>
-
-        <p>Title</p>
-        <p class="p-text">A name to refer to the drum or kit as. Example: <i>White Wash Inlay</i></p>
-
-        <hr>
-
-        <p>Release Date</p>
-        <p class="p-text">Rough date in which this kit/drum was "born". This will help us order the drums correctly in the gallery.</i></p>
-
-        <hr>
-
-        <p>Size</p>
-        <p class="p-text">Drum or kit size specifications. Example: <i>24x16, 12x8, 16x14</i></p>
-
-        <hr>
-
-        <p>Buy as built Price</p>
-        <p class="p-text">Estimated price if a customer were to buy this drum or kit as is. <i>Optional</i></p>
-
-        <hr>
-
-        <p>Details</p>
-        <p class="p-text">Hardware, badges, and other custom details to mention.</p>
-
-        <hr>
-
-        <p>Customer Name</p>
-        <p class="p-text">Customer's name. Called out in 'Recent Builds' on the home page. <i>Optional</i></p>
-
-        <hr>
-
-        <p>Customer Social</p>
-        <p class="p-text">Customer's Instagram, Twitter, or Facebook profile link. Use full link with http://</p>
-
-
-      </div>
-    </div>
   </div>
 
+</div>
 </div>
 
 <%= render 'views/footer' %>

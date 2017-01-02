@@ -6,30 +6,16 @@
       <div class="row">
 
           <div class="col-md-8">
-            <img src="<%= drum.photo %>">
+            <img class="drum-photo" src="<%= drum.photo %>">
           </div>
 
-          <div class="col-md-4">
-            <br>
+          <div class="col-md-4 modal-head">
+
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h2><%= drum.drumTitle %></h2>
+            <center><%= image_tag('modal-brand.jpg', class:'modal-brand') %></center>
             <hr>
 
-            <h2>Sizes</h2>
-            <p class="p-text"><%= drum.drumSize %></p>
-
-            <h2>Details</h2>
             <p class="p-text"><%= drum.drumDetails %></p>
-
-            <h2>Artist</h2>
-            <p class="p-text"><a href="<%= drum.drumCustomerSocial %>"><%= drum.drumCustomer %></a></p>
-
-            <hr>
-
-            <center>
-            <p class="p-label text-center"><%= drum.drumPrice %></p>
-            <p><a class="btn-inverse btn-primary btn-sm text-center" href="#" role="button">build your own</a></p>
-          </center>
 
           </div>
 

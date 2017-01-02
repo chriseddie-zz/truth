@@ -1,57 +1,9 @@
-<!-- NAVIGATION -->
-
-
-<%= render 'views/header' %>
-
-
-
-<!-- CAROUSEL -->
-
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag 'hero-1.jpg', alt: "Gabe Barham" %>
-      <div class="carousel-caption">
-
-        <span class="carousel-title">
-
-          The world's finest custom drums<br>
-          Handmade in Portland, OR<br><br>
-
-      	</span>
-
-          <p><a class="btn btn-primary btn-lg" href="build.html" role="button">start building</a></p>
-
-      </div>
-    </div>
-
-    <div class="item">
-      <%= image_tag 'hero-1.jpg', alt: "Gabe Barham 2" %>
-    </div>
-
-    <div class="item">
-      <%= image_tag 'hero-1.jpg', alt: "Gabe Barham 3" %>
-    </div>
+<div class="jumbotron-header">
+  <%= render 'views/header' %>
+  <div class="jumbo-head">
+    drums
   </div>
-
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-
 
 
 <!-- MAIN CARD BODY -->
@@ -59,13 +11,8 @@
 
 <div class="container">
 
-	<div class="section-title">
-		recent builds
-		<hr>
-	</div>
-
   <div class="row">
-    <% @drums = Drum.order("created_at desc").limit(6) %>
+    <% @drums = Drum.order("created_at desc").limit(9) %>
     <% @drums.each do |drum| %>
       <div class="col-md-4">
         <div class="img-600">
@@ -91,104 +38,15 @@
 
 	<div class="row text-center">
 
-    <p><%= link_to "view all drums", drums_path, class: "btn-inverse btn-primary btn-sm" %></p>
+    <p><%= link_to "show more", drums_path, class: "btn-inverse btn-primary btn-sm" %></p>
 
 	</div>
 
-
-		<div class="section-title">
-		from the shop
-		<hr>
-	</div>
-
-	<div class="row">
-
-		<div class="col-md-3 pull-left">
-			<div class="img-450">
-				<a class="meta-hover" href="#"><img class="shop" src="shop/winding-wheel.jpg">
-
-					<div class="contenthover">
-						<div class="hover-text-container">
-							<div class="hover-text-head">Winding Wheel Key Clip</div>
-							<div class="hover-text-sub">$40</div>
-						</div>
-					</div>
-
-				</a>
-			</div>
-		</div>
-
-		<div class="col-md-3">
-			<div class="img-450 text-center">
-				<a class="meta-hover" href="#"><img class="shop" src="shop/arm-me.jpg">
-
-					<div class="contenthover">
-						<div class="hover-text-container">
-							<div class="hover-text-head">"Arm me" Tee</div>
-							<div class="hover-text-sub">$20</div>
-						</div>
-					</div>
-
-				</a>
-			</div>
-		</div>
-
-		<div class="col-md-3">
-			<div class="img-450 text-center">
-				<a class="meta-hover" href="#"><img class="shop" src="shop/sink.jpg">
-
-					<div class="contenthover">
-						<div class="hover-text-container">
-							<div class="hover-text-head">Sink or swim Tee</div>
-							<div class="hover-text-sub">$20</div>
-
-						</div>
-					</div>
-
-				</a>
-			</div>
-		</div>
-
-		<div class="col-md-3">
-			<div class="img-450 pull-right">
-				<a class="meta-hover" href="#"><img class="shop" src="shop/decal.jpg">
-
-					<div class="contenthover">
-						<div class="hover-text-container">
-							<div class="hover-text-head">Decal</div>
-							<div class="hover-text-sub">$5</div>
-						</div>
-					</div>
-
-				</a>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="row text-center">
-
-		<p><a class="btn-inverse btn-primary btn-sm" href="shop.html" role="button">visit the shop</a></p>
-
-	</div>
 
 </div>
 
 
-<!-- PRE-FOOTER -->
 
-<div class="jumbotron-footer">
-	<div class="container hero-callout">
-
-		<p><div class="sm-logo"> </div></p>
-
-		<p class="inverse">Truth Custom Drums is one of the top drum manufacturers in the world. With over a decade of experience in the industry, we have become a brand name across the globe. Our quality is proven from our growing list of inspiring artists and customers. If you desire an instrument with top grade looks and sound, then Truth has you covered. This is who we are and this is what we do.</p>
-		<br>
-
-	  <p><a class="btn btn-primary btn-lg" href="company.html" role="button">learn more</a></p>
-
-	</div>
-</div>
 
 
 <!-- FOOTER -->

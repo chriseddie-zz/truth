@@ -15,7 +15,7 @@
     <h2>Drum Details</h2>
     <hr>
 
-    <%= f.text_field :drumTitle, class: "form-control", placeholder: "Title" %>
+    <!-- <%= f.text_field :drumTitle, class: "form-control", placeholder: "Title" %>
     <br>
   </div>
   <div class="field">
@@ -29,9 +29,9 @@
   <div class="field">
     <%= f.text_field :drumPrice, class: "form-control", placeholder: "Buy as built price" %>
     <br>
-  </div>
+  </div> -->
   <div class="field">
-    <%= f.text_area :drumDetails, rows: "8", class: "form-control", placeholder: "Additional Details" %>
+    <%= f.text_area :drumDetails, rows: "8", class: "form-control" %>
     <br>
   </div>
 
@@ -40,9 +40,10 @@
   <div class="field">
     <%= f.file_field :photo %>
     <br>
+    <hr>
   </div>
 
-  <br>
+  <!-- <br>
   <h2>Customer Details</h2>
   <hr>
 
@@ -57,9 +58,11 @@
 
   <hr>
   <p><%= f.check_box :snare%> This is a snare drum</p>
-  <hr>
+  <hr> -->
 
   <div class="actions">
+    <center>
     <%= f.submit class: "btn-inverse btn-primary btn-sm" %>
+    </center>
   </div>
 <% end %>

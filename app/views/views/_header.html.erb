@@ -1,21 +1,17 @@
 <div class="container-fluid">
-	<div class="row navbar-default">
-			<div class="col-md-5 menu-left">
-				<ul class="nav navbar-nav pull-right">
-					<li><%= link_to "Drums", drums_path %></li>
-					<li><%= link_to "Build", :controller => :views, :action => :build %></li>
-					<li><%= link_to "Shop", :controller => :views, :action => :shop %></li>
-				</ul>
-			</div>
-		<div class="col-sm-2 menu-center text-center">
-				<%=link_to image_tag('logo.jpg', class:"brand"), controller: "views" %>
+	<div class="row">
+		<div class="text-center">
+				<%=link_to image_tag('sm-logo.png', class:"brand"), controller: "views" %>
 		</div>
-			<div class="col-md-5 menu-right">
-				<ul class="nav navbar-nav">
-					<li><%= link_to "Artists", artists_path %></li>
-					<li><%= link_to "Company", :controller => :views, :action => :company %></li>
-					<li><%= link_to "Contact", :controller => :views, :action => :contact %></li>
-				</ul>
-			</div>
-	</div>
+
+		<div class="text-center">
+			<ul class="truth-nav">
+				<li><%= link_to "Drums", controller: "views" %></li>
+				<li><%= link_to "Shop", :controller => :views, :action => :company %></li>
+				<li><%= link_to "Artists", artists_path %></li>
+				<li><%= link_to "Company", :controller => :views, :action => :company %></li>
+				<li><%= link_to "Contact", :controller => :views, :action => :contact %></li>
+			</ul>
+		</div>
+</div>
 </div>
