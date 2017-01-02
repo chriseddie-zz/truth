@@ -1,22 +1,29 @@
-<%= render 'views/header' %>
+<div class="jumbotron-artist">
+  <%= render 'views/header' %>
+</div>
 
 <div class="container vertical-center">
-  <div class="drumwell">
+  <div class="drumwell row">
 
-    <div class="row">
+    <div class="show-content">
 
-        <div class="col-md-8">
-          <img class="drum-photo" src="<%= @drum.photo %>">
-        </div>
+      <div class="col-md-8 modal-photo">
+        <img class="drum-photo" src="<%= @drum.photo %>">
+      </div>
 
-        <div class="col-md-4">
+      <div class="col-md-4 modal-right">
 
-          <br>
-          <h2>Details</h2>
-          <hr>
+        <br>
+        <h2>Details</h2>
+        <hr>
+
+        <div class="modal-details">
           <p class="p-text"><%= @drum.drumDetails %></p>
-
+          <hr>
+          <p class="created-at"><%= @drum.created_at.strftime("%b. %d %Y") %></p>
         </div>
+
+      </div>
 
     </div>
 
@@ -72,3 +79,6 @@
   <%= link_to 'Edit', edit_drum_path(@drum) %> |
   <%= link_to 'Back', drums_path %>
 </div>
+
+<!-- FOOTER -->
+<%= render 'views/footer' %>

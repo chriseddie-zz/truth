@@ -2,24 +2,30 @@
 
 <div class="modal drum-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="<%= "drum_modal_#{drum.id}" %>">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="row">
+    <div class="modal-content row">
 
-          <div class="col-md-8">
-            <img class="drum-photo" src="<%= drum.photo %>">
-          </div>
 
-          <div class="col-md-4 modal-head">
+        <div class="col-md-8 modal-photo">
+          <img class="drum-photo" src="<%= drum.photo %>">
+        </div>
 
+        <div class="col-md-4 modal-right">
+
+          <div class="modal-head">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <center><%= image_tag('modal-brand.jpg', class:'modal-brand') %></center>
+            <%= image_tag('modal-brand.jpg', class:'modal-brand') %>
             <hr>
-
-            <p class="p-text"><%= drum.drumDetails %></p>
-
           </div>
 
-      </div>
+          <div class="modal-details">
+            <p class="p-text"><%= drum.drumDetails %></p>
+            <hr>
+            <p class="created-at"><%= drum.created_at.strftime("%b. %d %Y") %> <span class="pull-right"><%= link_to 'Share', drum_path(drum) %></span></p>
+          </div>
+
+        </div>
+
+
     </div>
   </div>
 </div>

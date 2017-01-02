@@ -22,6 +22,10 @@ a:hover {
 	color: #e8561f;
 }
 
+a:focus {
+  outline: 0;
+}
+
 ul > li {
   display: inline-block;
 }
@@ -94,12 +98,8 @@ ul > li {
 	margin-bottom: 10px;
 }
 
-.modal-brand {
-  width: 100px;
-}
-
 .drum-photo {
-  width: 600px;
+  width: 100%;
 }
 
 .well {
@@ -523,14 +523,15 @@ hr {
 	margin-bottom: -40px;
 }
 
+
+/*** MODAL ***/
+
 .modal-head {
-  margin-top: 28px;
+  padding-top: 28px;
 }
 
 .modal-content {
-  position: relative;
-  background-color: #ffffff;
-  border: 0px;
+  background-color: #fff;
   border: 0px;
   border-radius: 0px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -538,23 +539,49 @@ hr {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: 0;
+  padding: 0;
 }
 
-.close {
-  margin-right: 15px;
+.show-content {
+  background-color: #fff;
+  padding: 0;
+}
+
+.created-at {
+  font-size: 10px;
+  font-weight: normal;
+  color: #999;
 }
 
 .modal {
   display: none;
   overflow: hidden;
   position: fixed;
-  top: 20%;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+}
+
+.modal-brand {
+  width: 100px;
+}
+
+.modal-photo {
+  padding: 0;
+}
+
+.modal-right {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-details {
+  overflow: scroll;
+  max-height: 300px;
 }
 
 .drumwell {
