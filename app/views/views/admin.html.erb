@@ -7,28 +7,22 @@
 
 <div class="container">
 
-  <div class="row">
+  <div class="well">
 
-      <div class="well">
+    <h2>Admin Panel</h2>
+    <hr>
 
-        <h2>Admin Panel</h2>
-        <hr>
-
-        <p class="p-label">Add a drum to the gallery</p>
-        <%= link_to 'add drum', new_drum_path(@drum), class:"btn-inverse btn-primary btn-sm" %>
-        <br>
-        <hr>
-        <p class="p-label">Create an artist profile</p>
-        <%= link_to 'add artist', new_artist_path(@artist), class:"btn-inverse btn-primary btn-sm" %>
-        <br>
-
-      </div>
+    <p class="p-label">Add a drum to the gallery</p>
+    <%= link_to 'add drum', new_drum_path(@drum), class:"btn-inverse btn-primary btn-sm" %>
+    <br>
+    <hr>
+    <p class="p-label">Create an artist profile</p>
+    <%= link_to 'add artist', new_artist_path(@artist), class:"btn-inverse btn-primary btn-sm" %>
+    <br>
 
   </div>
+  <center>
+    <%= link_to "EXIT", controller: "views" %>
+  </center>
+
 </div>
-
-
-
-<!-- FOOTER -->
-
-<%= render 'footer' %>

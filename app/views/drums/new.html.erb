@@ -1,23 +1,20 @@
 <div class="container">
 
   <div class="text-center">
-      <%=link_to image_tag('admin-logo.png', class:"brand"), :controller => :views, :action => :admin %>
+    <%=link_to image_tag('admin-logo.png', class:"admin-brand"), :controller => :views, :action => :admin %>
   </div>
 
-  <div class="row">
+  <div class="section-title">
+    add a drum
+  </div>
+  <hr>
 
-    <div class="section-title">
-      add a drum
-    </div>
-    <hr>
-
-    <div class="well">
-      <%= render 'form' %>
-    </div>
-
+  <div class="well">
+    <%= render 'form' %>
   </div>
 
 </div>
-</div>
 
-<%= render 'views/footer' %>
+<center>
+  <%= link_to "EXIT", controller: "views" %>
+</center>

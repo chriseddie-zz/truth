@@ -1,6 +1,8 @@
-<%= render 'views/header' %>
-
 <div class="container">
+
+  <div class="text-center">
+    <%=link_to image_tag('admin-logo.png', class:"admin-brand"), :controller => :views, :action => :admin %>
+  </div>
 
   <div class="section-title">
     create artist profile
@@ -69,4 +71,6 @@
 
 </div>
 
-<%= render 'views/footer' %>
+<center>
+  <%= link_to "EXIT", controller: "views" %>
+</center>
