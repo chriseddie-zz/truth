@@ -1,4 +1,4 @@
-<div class="jumbotron-header">
+<div class="jumbotron-artist" style="background: linear-gradient(rgba(50, 47, 51, 0.90), rgba(50, 47, 51, 0.90)), url('<%= @artist.artist_hero_img %>'); background-position: center; background-size: cover; background-repeat: no-repeat;">
   <%= render 'views/header' %>
   <div class="container hero-callout">
     <span class="jumbo-head"><%= @artist.artist_name %></span>
@@ -163,4 +163,4 @@
 </p>
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %> -->
+<%= link_to 'Back', artists_path %>-->
