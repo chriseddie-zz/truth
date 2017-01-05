@@ -5,6 +5,12 @@
     <div class="modal-content row">
 
         <div class="col-md-8 modal-photo">
+
+          <div class="m_modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <%= image_tag('modal-brand.jpg', class:'modal-brand') %>
+          </div>
+
           <img class="drum-photo" src="<%= drum.photo %>">
         </div>
 
@@ -13,15 +19,14 @@
           <div class="modal-head">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <%= image_tag('modal-brand.jpg', class:'modal-brand') %>
-            <hr>
           </div>
 
           <div class="modal-details">
             <p class="p-text"><%= drum.drumDetails %></p>
-            <hr>
-            <p class="created-at"><%= drum.created_at.strftime("%b. %d %Y") %> <span class="pull-right"><%= link_to 'Share', drum_path(drum) %></span></p>
-          </div>
 
+          </div>
+          <hr>
+          <p class="created-at"><%= drum.created_at.strftime("%b. %d %Y") %> <span class="pull-right"><%= link_to 'Share', drum_path(drum) %></span></p>
         </div>
 
 
