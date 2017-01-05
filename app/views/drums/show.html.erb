@@ -1,5 +1,14 @@
-<div class="jumbotron-artist">
+<!-- MOBILE HEADER -->
+<div class="mobile-truth-nav" id="nav-toggle">
+  <%= render 'views/m_header' %>
+</div>
+
+<!-- DESKTOP HEADER -->
+<div class="jumbotron-header">
   <%= render 'views/header' %>
+  <div class="jumbo-head">
+    drums
+  </div>
 </div>
 
 <div class="container vertical-center">
@@ -13,9 +22,10 @@
 
       <div class="col-md-4 modal-right">
 
-        <br>
-        <h2>Details</h2>
-        <hr>
+        <div class="modal-head">
+          Details
+        </div>
+
 
         <div class="modal-details">
           <p class="p-text"><%= @drum.drumDetails %></p>
@@ -76,8 +86,8 @@
 
 <div class="text-center">
   <p id="notice"><%= notice %></p>
-  <%= link_to 'Edit', edit_drum_path(@drum) %> |
-  <%= link_to 'Back', drums_path %>
+  <%= link_to 'Edit', edit_drum_path(@drum) %>
+  <!-- <%= link_to 'Back', drums_path %> -->
 </div>
 
 <!-- FOOTER -->
