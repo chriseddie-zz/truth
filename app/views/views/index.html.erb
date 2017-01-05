@@ -1,3 +1,9 @@
+<!-- MOBILE HEADER -->
+<div class="mobile-truth-nav" id="foo">
+  <%= render 'views/m_header' %>
+</div>
+
+<!-- DESKTOP HEADER -->
 <div class="jumbotron-header">
   <%= render 'views/header' %>
   <div class="jumbo-head">
@@ -7,8 +13,6 @@
 
 
 <!-- MAIN CARD BODY -->
-
-
 <div class="container">
 
   <div class="row">
@@ -16,7 +20,7 @@
     <% @drums.each do |drum| %>
       <div class="col-md-4">
         <div class="img-600">
-          <a href="#" data-toggle="modal" data-target="<%= "#drum_modal_#{drum.id}" %>" class="meta-hover"><img class="kit" src="<%= drum.photo %>">
+          <a href="#" data-toggle="modal" data-target="<%= "#drum_modal_#{drum.id}" %>" class="meta-hover"><img src="<%= drum.photo %>">
 
             <!-- <div class="contenthover">
               <div class="hover-text-container">

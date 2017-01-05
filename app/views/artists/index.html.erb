@@ -7,23 +7,28 @@
 
 
 <div class="container">
+  <div class="row">
 
-<% @artists.each do |artist| %>
-  <div class="img-640">
+    <% @artists.each do |artist| %>
+    <div class="col-md-4 zero-col">
+      <div class="img-640">
 
-    <a href="<%= artist_path(artist) %>" class="meta-hover"><img src="<%= artist.artist_img %>" width="100%">
+        <a href="<%= artist_path(artist) %>" class="meta-hover"><img src="<%= artist.artist_img %>">
 
-      <div class="contenthover">
-        <div class="hover-text-container">
-          <div class="hover-text-head"><%= artist.artist_name %></div>
-          <div class="hover-text-sub"><%= artist.artist_band %></div>
-        </div>
+          <div class="contenthover">
+            <div class="hover-text-container">
+              <div class="hover-text-head"><%= artist.artist_name %></div>
+              <div class="hover-text-sub"><%= artist.artist_band %></div>
+            </div>
+          </div>
+        </a>
+
       </div>
-    </a>
+
+    </div>
+    <% end %>
 
   </div>
-<% end %>
-
 </div>
 
 <%= render 'views/footer' %>

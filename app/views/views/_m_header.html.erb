@@ -1,22 +1,23 @@
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
-		<div class="text-center">
-				<%=link_to image_tag('sm-logo.png', class:"brand"), controller: "views" %>
-		</div>
-
-		<div class="m_basement">
-			<a href="#" onclick="toggle_visibility('foo');">&#9776;</a>
-		</div>
 
 		<div class="text-center">
-			<ul class="truth-nav">
+				<%=link_to image_tag('m_logo.png', class:"m_brand"), controller: "views" %>
+		</div>
+
+		<div class="m_close">
+			<a href="#" onclick="toggle_visibility('foo');">x</a>
+		</div>
+
+		<div class="text-center">
+			<ul class="m_truth-nav">
 				<li><%= link_to "Drums", controller: "views" %></li>
 				<li><%= link_to "Shop", :controller => :views, :action => :company %></li>
 				<li id="three"><%= link_to "Artists", artists_path %></li>
 				<li><%= link_to "Company", :controller => :views, :action => :company %></li>
 				<li><%= link_to "Contact", :controller => :views, :action => :contact %></li>
 			</ul>
-
 		</div>
-</div>
+
+	</div>
 </div>
