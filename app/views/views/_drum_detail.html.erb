@@ -11,7 +11,7 @@
             <%= image_tag('modal-brand.jpg', class:'modal-brand') %>
           </div>
 
-          <img class="drum-photo" src="<%= drum.photo %>">
+          <a href="<%= drum_path(drum) %>"><img class="drum-photo" src="<%= drum.photo %>"></a>
         </div>
 
         <div class="col-md-4 modal-right">

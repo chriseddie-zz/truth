@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "geoffbarrios", password: "Truth", except: [:index, :show]
+  http_basic_authenticate_with name: "truth", password: "truth", except: [:index, :show]
 
   # GET /artists
   # GET /artists.json

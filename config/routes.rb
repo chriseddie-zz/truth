@@ -15,7 +15,13 @@ Rails.application.routes.draw do
 
   get 'views/admin'
 
+  get 'views/terms'
+
+  get 'views/support'
+
   resources :artists
+  resources :views
+  resources :drums
 
 
   root 'views#index'

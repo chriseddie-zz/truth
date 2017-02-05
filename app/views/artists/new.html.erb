@@ -1,8 +1,18 @@
-<div class="container">
+<!-- ADMIN HEADER -->
+<div class="container-fluid basic-header">
+  <div class="row">
 
-  <div class="text-center">
-    <%=link_to image_tag('admin-logo.png', class:"admin-brand"), :controller => :views, :action => :admin %>
+    <div class="admin_close">
+			<a href="/views">&times;</a>
+		</div>
+
+    <div class="text-center">
+        <%=link_to image_tag('admin-logo.png', class:"basic-brand"), controller: "views" %>
+    </div>
   </div>
+</div>
+
+<div class="container">
 
   <div class="section-title">
     create artist profile
@@ -28,12 +38,12 @@
         <hr>
 
         <p>Artist Photo</p>
-        <p class="p-text">Must be 640x640 pixels. Displayed on the Artists page. <a href="#">Example</a></p>
+        <p class="p-text">Recommended 640x640 pixels. Displayed on the Artists page.</p>
 
         <hr>
 
         <p>Header Image</p>
-        <p class="p-text">Must be 1440x300 pixels. Displayed at the top of your artist page. <a href="#">Example</a></p>
+        <p class="p-text">Recommended 1440x300 pixels. Displayed at the top of your artist page.</p>
 
         <hr>
 
@@ -58,7 +68,7 @@
         <hr>
 
         <p>Kit Photo</p>
-        <p class="p-text">Must be 600x450.</p>
+        <p class="p-text">Recommended 600x450.</p>
 
         <hr>
 
@@ -70,7 +80,3 @@
   </div>
 
 </div>
-
-<center>
-  <%= link_to "EXIT", controller: "views" %>
-</center>

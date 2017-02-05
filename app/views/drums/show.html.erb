@@ -1,13 +1,13 @@
-<!-- MOBILE HEADER -->
-<div class="mobile-truth-nav" id="nav-toggle">
-  <%= render 'views/m_header' %>
-</div>
+<div class="container-fluid basic-header">
+  <div class="row">
+    <div class="text-center">
+        <%=link_to image_tag('m_logo.png', class:"basic-brand"), controller: "views" %>
 
-<!-- DESKTOP HEADER -->
-<div class="jumbotron-header">
-  <%= render 'views/header' %>
-  <div class="jumbo-head">
-    drums
+
+          <div class="edit-link"><%= link_to 'Edit', edit_drum_path(@drum) %></div>
+
+
+    </div>
   </div>
 </div>
 
@@ -21,74 +21,33 @@
       </div>
 
       <div class="col-md-4 modal-right">
-
-        <div class="modal-head">
-          Details
-        </div>
-
+        <div class="modal-head">Details</div>
 
         <div class="modal-details">
           <p class="p-text"><%= @drum.drumDetails %></p>
-          <hr>
-          <p class="created-at"><%= @drum.created_at.strftime("%b. %d %Y") %></p>
-        </div>
 
+          <p class="created-at"><%= @drum.created_at.strftime("%b. %d %Y") %></p>
+
+          <hr>
+
+          <div class="share-links">
+            <span class='st_facebook'></span>
+            <span class='st_twitter'></span>
+            <span class='st_pinterest'></span>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <!-- <p>
-      <strong>Photo:</strong>
-      <%= @drum.photo %>
-    </p>
-
-    <p>
-      <strong>Drumtitle:</strong>
-      <%= @drum.drumTitle %>
-    </p>
-
-    <p>
-      <strong>Release Date:</strong>
-      <%= @drum.release_date %>
-    </p>
-
-    <p>
-      <strong>Drumsize:</strong>
-      <%= @drum.drumSize %>
-    </p>
-
-    <p>
-      <strong>Drumprice:</strong>
-      <%= @drum.drumPrice %>
-    </p>
-
-    <p>
-      <strong>Drumcustomer:</strong>
-      <%= @drum.drumCustomer %>
-    </p>
-
-    <p>
-      <strong>Drumcustomersocial:</strong>
-      <%= @drum.drumCustomerSocial %>
-    </p>
-
-    <p>
-      <strong>Drumdetails:</strong>
-      <%= @drum.drumDetails %>
-    </p>
-
-    <p>
-      <strong>Snare?:</strong>
-      <%= @drum.snare %>
-    </p> -->
   </div>
 </div>
 
-<div class="text-center">
-  <p id="notice"><%= notice %></p>
-  <%= link_to 'Edit', edit_drum_path(@drum) %>
-  <!-- <%= link_to 'Back', drums_path %> -->
-</div>
+<!-- <div class="footer-short">
+  <%= render 'views/footer' %>
+</div> -->
 
-<!-- FOOTER -->
-<%= render 'views/footer' %>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=d5c7a024-186e-4e30-a49d-e4e093368873"></script>
+<script type="text/javascript">stLight.options({publisher: "d5c7a024-186e-4e30-a49d-e4e093368873", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
