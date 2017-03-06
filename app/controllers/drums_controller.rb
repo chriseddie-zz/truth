@@ -18,10 +18,12 @@ class DrumsController < ApplicationController
   def new
     @drum = Drum.new
     @drum.release_date = Time.now
+    @is_admin = true
   end
 
   # GET /drums/1/edit
   def edit
+    @is_admin = true
   end
 
   # POST /drums
@@ -31,7 +33,7 @@ class DrumsController < ApplicationController
 
     respond_to do |format|
       if @drum.save
-        format.html { redirect_to @drum, notice: 'Drum was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Drum was successfully created.' }
         format.json { render :show, status: :created, location: @drum }
       else
         format.html { render :new }
@@ -45,7 +47,7 @@ class DrumsController < ApplicationController
   def update
     respond_to do |format|
       if @drum.update(drum_params)
-        format.html { redirect_to @drum, notice: 'Drum was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Drum was successfully updated.' }
         format.json { render :show, status: :ok, location: @drum }
       else
         format.html { render :edit }
@@ -59,7 +61,7 @@ class DrumsController < ApplicationController
   def destroy
     @drum.destroy
     respond_to do |format|
-      format.html { redirect_to drums_url, notice: 'Drum was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Drum was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

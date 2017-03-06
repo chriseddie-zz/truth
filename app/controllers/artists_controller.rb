@@ -1,12 +1,14 @@
 class ArtistsController < ApplicationController
+  # before_action :authenticate, except: [:index, :show]
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "truth", password: "truth", except: [:index, :show]
+  http_basic_authenticate_with :name => ENV['ADMIN_USER'], :password => ENV['ADMIN_PASS'], except: [:index, :show]
 
   # GET /artists
   # GET /artists.json
   def index
     @artists = Artist.all
+    @title = "artists"
   end
 
   # GET /artists/1
@@ -17,6 +19,7 @@ class ArtistsController < ApplicationController
   # GET /artists/new
   def new
     @artist = Artist.new
+    @is_admin = true
   end
 
   # GET /artists/1/edit

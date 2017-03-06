@@ -1,0 +1,26 @@
+<div class="container">
+
+  <!-- ADMIN MENU -->
+  <div class="col-md-4">
+    <div class="well">
+      <%= render 'layouts/admin_menu' %>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="col-md-8">
+
+    <% @contents.each do | content | %>
+    <div class="well">
+      <h2><%= content.content_key %><%= link_to 'Edit', edit_content_path(content.id), class: "pull-right" %></h2>
+      <hr>
+      <%= strip_tags(content.content_text.truncate(500)) %><br><br>
+
+    </div>
+    <% end %>
+
+    <%= link_to "Add content", new_content_path %>
+
+  </div>
+
+</div>

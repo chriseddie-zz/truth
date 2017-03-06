@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="text-center">
+				<%=link_to image_tag('sm-logo.png', class:"brand"), root_path %>
+		</div>
+
+		<div class="m_basement">
+			<a href="#" onclick="toggle_visibility('nav-toggle');">&#9776;</a>
+		</div>
+
+		<div class="text-center">
+			<ul class="truth-nav">
+				<li><%= link_to "Drums", root_path %></li>
+				<li><%= link_to "Shop", shop_path %></li>
+				<li><%= link_to "Artists", artists_path %></li>
+				<li><%= link_to "Company", company_path %></li>
+				<li><%= link_to "Contact", contact_path %></li>
+			</ul>
+
+		</div>
+</div>
+</div>

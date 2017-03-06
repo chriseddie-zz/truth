@@ -15,21 +15,6 @@
     <h2>Drum Details</h2>
     <hr>
 
-    <!-- <%= f.text_field :drumTitle, class: "form-control", placeholder: "Title" %>
-    <br>
-  </div>
-  <div class="field">
-    <%= f.date_field :release_date, class: "form-control", placeholder: "Release Date" %>
-    <br>
-  </div>
-  <div class="field">
-    <%= f.text_field :drumSize, class: "form-control", placeholder: "Size(s)" %>
-    <br>
-  </div>
-  <div class="field">
-    <%= f.text_field :drumPrice, class: "form-control", placeholder: "Buy as built price" %>
-    <br>
-  </div> -->
   <div class="field">
     <%= f.text_area :drumDetails, rows: "8", class: "form-control" %>
     <br>
@@ -43,24 +28,12 @@
     <hr>
   </div>
 
-  <!-- <br>
-  <h2>Customer Details</h2>
-  <hr>
-
-  <div class="field">
-    <%= f.text_field :drumCustomer, class: "form-control", placeholder: "Customer Name" %>
-    <br>
-  </div>
-  <div class="field">
-    <%= f.text_field :drumCustomerSocial, class: "form-control", placeholder: "Customer Social Link" %>
-    <br>
-  </div>
-
-  <hr>
-  <p><%= f.check_box :snare%> This is a snare drum</p>
-  <hr> -->
-
   <div class="actions">
     <%= f.submit class: "btn-inverse btn-primary btn-sm" %>
+
+    <% if !@drum.new_record? %>
+    <%= link_to 'Delete', @drum, method: :delete, data: { confirm: 'Are you sure you want to delete this drum?' }, class: "pull-right" %>
+    <% end %>
+
   </div>
 <% end %>

@@ -1,26 +1,17 @@
-<!-- ADMIN HEADER -->
-<div class="container-fluid basic-header">
-  <div class="row">
-
-    <div class="admin_close">
-			<a href="/views">&times;</a>
-		</div>
-
-    <div class="text-center">
-        <%=link_to image_tag('admin-logo.png', class:"basic-brand"), controller: "views" %>
-    </div>
-  </div>
-</div>
-
 <div class="container">
 
-  <div class="section-title">
-    add a drum
+  <!-- ADMIN MENU -->
+  <div class="col-md-4">
+    <div class="well">
+      <%= render 'layouts/admin_menu' %>
+    </div>
   </div>
-  <hr>
 
-  <div class="well">
-    <%= render 'form' %>
+  <!-- CONTENT -->
+  <div class="col-md-8">
+    <div class="well">
+      <%= render 'form' %>
+    </div>
   </div>
 
 </div>

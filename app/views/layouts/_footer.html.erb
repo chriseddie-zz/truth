@@ -6,7 +6,7 @@
     <%=link_to image_tag('btn-fb.jpg', class:"footer-social"), "https://www.facebook.com/TruthCustomDrums" %>
 
     <div class="footer-links">
-      <%= link_to "Contact", :controller => :views, :action => :contact %><span class="space"></span><%= link_to 'terms & conditions', "terms" %><span class="space"></span><%= link_to 'support', "support" %><span class="space"></span><%= link_to "admin", :controller => :views, :action => :admin %>
+      <%= link_to "contact", contact_path %><span class="space"></span><%= link_to "terms & conditions", terms_path %><span class="space"></span><%= link_to "support", support_path %><span class="space"></span><%= link_to "admin", admin_path %>
     </div>
 
     <div class="footer-copy">&copy; 2016 Truth Custom Drums</div>
