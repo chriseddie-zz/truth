@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   get 'index' => 'welcome#index'
-  get 'drum' => 'welcome#drum'
   get 'build' => 'welcome#build'
   get 'company' => 'welcome#company'
   get 'contact' => 'welcome#contact'
@@ -10,6 +9,8 @@ Rails.application.routes.draw do
   get 'terms' => 'welcome#terms'
   get 'support' => 'welcome#support'
   get 'welcome/content'
+  get 'drums/admin'
+  get 'artists/admin'
 
   resources :artists
   resources :contents

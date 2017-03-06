@@ -1,0 +1,46 @@
+<div class="container">
+
+  <!-- ADMIN MENU -->
+  <div class="col-md-4">
+    <div class="well">
+      <%= render 'layouts/admin_menu' %>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="col-md-8">
+
+    <div class="well">
+      <%= link_to 'Add Drum to Gallery', new_drum_path(@drum) %><span class="glyphicon glyphicon-lock pull-right"></span>
+    </div>
+
+    <div class="well">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Drum</th>
+            <th>Created</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <% @drums = Drum.order("created_at desc") %>
+          <% @drums.each do |drum| %>
+          <tr>
+            <td><a href="<%= drum_path(drum) %>"><img src="<%= drum.photo %>" class="drum-thumb"></a></td>
+            <td><%= drum.created_at.strftime("%b. %d %Y") %></td>
+            <td><%= link_to 'Edit', edit_drum_path(drum.id) %></td>
+          </tr>
+          <% end %>
+
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+
+</div>

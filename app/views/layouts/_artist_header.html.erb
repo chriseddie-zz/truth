@@ -1,4 +1,4 @@
-<div class="jumbotron-artist" style="background: linear-gradient(rgba(50, 47, 51, 0.90), rgba(50, 47, 51, 0.90)), url('<%= @artist.artist_hero_img.empty? ? image_path("hero-2.jpg") : @artist.artist_hero_img %>'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+<div class="jumbotron-artist" style="background: linear-gradient(rgba(50, 47, 51, 0.90), rgba(50, 47, 51, 0.90)), url('<%= @artist.artist_hero_img.blank? ? image_path("hero-2.jpg") : @artist.artist_hero_img %>'); background-position: center; background-size: cover; background-repeat: no-repeat;">
   <%= render 'layouts/header_nav' %>
   <div class="container hero-callout">
     <span class="jumbo-head"><%= @artist.artist_name %></span>
