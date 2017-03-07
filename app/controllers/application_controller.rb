@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_site_variables
   def set_site_variables
-    @site_content = Content.find_by_content_key("key_header_img")
+    @site_content = Content.find_by_content_key('key_header_img')
   end
 
 end

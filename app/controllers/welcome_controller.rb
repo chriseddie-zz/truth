@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @title = "drums"
+    @title = 'drums'
   end
 
   def drum
@@ -11,18 +11,18 @@ class WelcomeController < ApplicationController
 
   def company
     @title = 'company'
-    @content = Content.find_by_content_key('key_company')
-    @page_content = @content.content_text
+    @contents = Content.find_by_content_key('key_company')
+    @page_content = @contents.content_text
   end
 
   def terms
-    @title = "terms & conditions"
-    @content = Content.find_by_content_key("key_terms")
+    @title = 'terms & conditions'
+    @content = Content.find_by_content_key('key_terms')
     @page_content = @content.content_text
   end
 
   def contact
-    @title = "contact"
+    @title = 'contact'
   end
 
   def content
@@ -33,12 +33,12 @@ class WelcomeController < ApplicationController
   end
 
   def shop
-    @title = "shop"
+    @title = 'shop'
   end
 
   def support
-    @title = "support"
-    @content = Content.find_by_content_key("key_support")
+    @title = 'support'
+    @content = Content.find_by_content_key('key_support')
     @page_content = @content.content_text
   end
 end
