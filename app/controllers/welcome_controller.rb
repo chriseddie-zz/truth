@@ -10,8 +10,8 @@ class WelcomeController < ApplicationController
   end
 
   def company
-    @title = "company"
-    @content = Content.find_by_content_key("key_company")
+    @title = 'company'
+    @content = Content.find_by_content_key('key_company')
     @page_content = @content.content_text
   end
 
