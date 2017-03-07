@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  # before_action :authenticate, except: [:index, :show]
+
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
   http_basic_authenticate_with :name => ENV['ADMIN_USER'], :password => ENV['ADMIN_PASS'], except: [:index, :show]

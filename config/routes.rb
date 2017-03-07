@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'admin' => 'welcome#admin'
   get 'terms' => 'welcome#terms'
   get 'support' => 'welcome#support'
-  get 'welcome/content'
   get 'drums/admin'
   get 'artists/admin'
 
