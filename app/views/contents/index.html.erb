@@ -10,6 +10,10 @@
   <!-- CONTENT -->
   <div class="col-md-8">
 
+    <div class="well">
+      <%= link_to "Add Content Section", new_content_path %><span class="glyphicon glyphicon-lock pull-right"></span>
+    </div>
+
     <% @contents.each do | content | %>
     <div class="well">
       <h2><%= content.content_key %><%= link_to 'Edit', edit_content_path(content.id), class: "pull-right" %></h2>
@@ -18,8 +22,6 @@
 
     </div>
     <% end %>
-
-    <%= link_to "Add content", new_content_path %>
 
   </div>
 

@@ -2,7 +2,7 @@
 <div class="container">
 
   <div class="row">
-    <% @drums = Drum.order("created_at desc").limit(9) %>
+    <% @drums = Drum.order("created_at desc") %>
     <% @drums.each do |drum| %>
       <div class="col-md-4">
         <div class="img-600">
