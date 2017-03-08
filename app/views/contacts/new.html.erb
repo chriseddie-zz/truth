@@ -5,16 +5,13 @@
 
       <div class="well">
 
-        <h2>Contact Truth Custom Drums</h2>
+        <h2>Contact Truth Drums</h2>
         <hr>
 
           <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
             <%= f.text_field :name, :required => true, class: 'form-control', placeholder: 'Name' %><br>
-            <!-- <%= f.input :name, :required => true, class: 'form-control', placeholder: 'name' %> -->
             <%= f.text_field :email, :required => true, class: 'form-control', placeholder: 'Email' %><br>
-            <!-- <%= f.input :email, :required => true %> -->
             <%= f.text_area :message, :required => true, class: 'form-control', placeholder: 'Message', rows: '10' %>
-            <!-- <%= f.input :message, :as => :text, :required => true %> -->
             <div class= "hidden">
               <%= f.input :nickname, :hint => 'Leave this field blank!' %>
             </div>
