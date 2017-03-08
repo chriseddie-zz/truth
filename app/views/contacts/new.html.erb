@@ -8,22 +8,21 @@
         <h2>Contact Truth Custom Drums</h2>
         <hr>
 
-        <div align="center">
-          <h3>Send A message to Us</h3>
-
           <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-            <%= f.input :name, :required => true %>
-            <%= f.input :email, :required => true %>
-            <%= f.input :message, :as => :text, :required => true %>
+            <%= f.text_field :name, :required => true, class: 'form-control', placeholder: 'Name' %><br>
+            <!-- <%= f.input :name, :required => true, class: 'form-control', placeholder: 'name' %> -->
+            <%= f.text_field :email, :required => true, class: 'form-control', placeholder: 'Email' %><br>
+            <!-- <%= f.input :email, :required => true %> -->
+            <%= f.text_area :message, :required => true, class: 'form-control', placeholder: 'Message', rows: '10' %>
+            <!-- <%= f.input :message, :as => :text, :required => true %> -->
             <div class= "hidden">
               <%= f.input :nickname, :hint => 'Leave this field blank!' %>
             </div>
             <div>
               </br>
-              <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
+              <%= f.button :submit, 'Send message', :class=> "btn-inverse btn-primary btn-sm" %>
             </div>
           <% end %>
-        </div>
 
       </div>
 
