@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
 
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with :name => ENV['ADMIN_USER'], :password => ENV['ADMIN_PASS'], except: [:index, :show]
+  http_basic_authenticate_with :name => ENV['ARTIST_USER'], :password => ENV['ARTIST_PASS'], except: [:index, :show]
 
   # GET /artists
   # GET /artists.json
